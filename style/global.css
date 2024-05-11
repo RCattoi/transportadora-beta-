@@ -1,0 +1,131 @@
+* {
+  font-family: Montserrat;
+  /* outline: solid 1px red; */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat;
+  color: rgb(58, 58, 58);
+}
+p {
+  text-align: left;
+}
+.navbar-brand {
+  color: #ffc107;
+}
+
+.btn-contact {
+  width: fit-content;
+}
+#carouselExampleAutoplaying,
+.responsiveImg {
+  display: none;
+}
+.line {
+  box-sizing: content-box;
+  width: 100%;
+  border-radius: 5px;
+}
+.truck {
+  border: 4px solid #ffc107;
+}
+
+input {
+  margin: 10px 0px;
+}
+.quem-somos-img,
+.truck {
+  object-fit: fill;
+  height: 450px;
+  border-radius: 5px;
+}
+.lineImage {
+  object-fit: fill;
+  height: 300px;
+  width: 440px;
+  border-radius: 10px;
+}
+.gGrid,
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+.gGrid h2 {
+  grid-column: 1/3;
+}
+.contactForm {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+@media (max-width: 950px) {
+  .truck {
+    object-fit: fill;
+    width: 200px;
+    height: 300px;
+  }
+  .lineImage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .quem-somos-img {
+    height: 300px;
+  }
+  .responsiveImg {
+    display: block;
+    width: 100%;
+  }
+  .solarPanel {
+    display: none;
+  }
+
+  #contato {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .contactForm {
+    margin: auto 15px;
+  }
+  .gGrid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  #carouselExampleAutoplaying {
+    display: block;
+    background-color: rgba(255, 193, 7, 0.5);
+  }
+
+  #carouselExampleAutoplaying {
+    /* height: 450px; */
+    width: 190px;
+  }
+  .carousel-img {
+  }
+  .carousel {
+    width: 100%;
+  }
+  .carousel-item img {
+    object-fit: fill;
+    height: 300px;
+  }
+
+  .divTruck {
+    display: none !important;
+  }
+  .gGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
