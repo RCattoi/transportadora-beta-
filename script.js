@@ -53,15 +53,11 @@ const sendEmail = async (e) => {
 btn.addEventListener('click', sendEmail);
 
 function controlToast(texto) {
-  const toastTrigger = document.getElementById('liveToastBtn');
   const toastLiveExample = document.getElementById('liveToast');
-
-  if (toastTrigger) {
+  if (texto.length > 0) {
     const toastBootstrap =
       bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-    if (texto.length > 0) {
-      toastLiveExample.querySelector('.toast-body').innerText = texto;
-      toastBootstrap.show();
-    }
+    toastLiveExample.querySelector('.toast-body').innerText = texto;
+    toastBootstrap.show();
   }
 }
