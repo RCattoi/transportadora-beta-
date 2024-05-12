@@ -13,7 +13,6 @@ const sendEmail = async (e) => {
   const phone = document.querySelector('#inputPhone4').value;
   const message = document.querySelector('#inputMessage4').value;
 
-  console.log(name, email, phone, message);
   const options = {
     method: 'POST',
     headers: {
@@ -48,7 +47,6 @@ const sendEmail = async (e) => {
     default:
       requestResp = 'Email enviado com sucesso!';
   }
-  console.log(response);
   controlToast(requestResp);
 };
 
