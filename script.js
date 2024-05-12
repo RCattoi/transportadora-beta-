@@ -1,22 +1,35 @@
-import USERID from './etc/secrets/email-key.js';
-// import emailjs from './node_modules/emailjs-com/dist/email.min.js';
-const btn = document.querySelector('.enviarEmail');
+const whatsappBTN = document.querySelectorAll('.whatsapp');
+console.log(whatsappBTN);
+whatsappBTN.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    window.open(`https://wa.me/5521936183691?text=ola`);
+  });
+});
 
-emailjs.init(USERID); // Your user ID esconder na aplicação
-const callback = (e, text) => {
-  e.preventDefault();
-  // const name = document.querySelector('.name').value;
-  emailjs
-    .send('service_dzoqy8o', 'template_2akyqfb', {
-      to: 'rodrigoccattoi@gmail.com',
-      subject: `Novo Contato`,
-      text: 'text',
-    })
-    .then(function (response) {
-      console.log('Email sent successfully:', response);
-    })
-    .catch(function (error) {
-      console.error('Email sending failed:', error);
-    });
+const btn = document.querySelector('.sendEmail');
+
+const sendEmail = async () => {
+  const name = document.querySelector('#inputName4').value;
+  const email = document.querySelector('#inputEmail4').value;
+  const phone = document.querySelector('#inputPhone4').value;
+  const message = document.querySelector('inputMessage4').value;
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: phone,
+      message: message,
+    }),
+  };
+  const request = await fetch(
+    'https://email-transportadora.onrender.com/data',
+    options
+  );
 };
-btn.addEventListener('click', callback);
+
+btn.addEventListener('click', () => sendEmail);
