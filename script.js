@@ -1,5 +1,4 @@
 const whatsappBTN = document.querySelectorAll('.whatsapp');
-console.log(whatsappBTN);
 whatsappBTN.forEach((btn) => {
   btn.addEventListener('click', () => {
     window.open(`https://wa.me/5521936183691?text=ola`);
@@ -30,6 +29,8 @@ const sendEmail = async () => {
     'https://email-transportadora.onrender.com/data',
     options
   );
+  const response = await request.json();
+  console.log(response);
 };
 
 btn.addEventListener('click', () => sendEmail);
