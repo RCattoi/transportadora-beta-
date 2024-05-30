@@ -64,6 +64,10 @@ input {
   background-color: rgba(255, 193, 7, 0.2);
 }
 
+.parceirosImg {
+  width: 15%;
+  height: 100%;
+}
 @media (max-width: 950px) {
   .truck {
     object-fit: fill;
@@ -105,12 +109,13 @@ input {
     display: block;
     background-color: rgba(255, 193, 7, 0.5);
   }
+  .parceirosImg {
+    width: 35%;
+  }
 
   #carouselExampleAutoplaying {
     /* height: 450px; */
     width: 190px;
-  }
-  .carousel-img {
   }
   .carousel {
     width: 100%;
