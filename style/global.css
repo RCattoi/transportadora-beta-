@@ -2,6 +2,9 @@
   font-family: Montserrat;
   /* outline: solid 1px red; */
 }
+a {
+  color: #ffc107;
+}
 h1,
 h2,
 h3,
